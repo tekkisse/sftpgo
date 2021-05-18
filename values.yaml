@@ -19,7 +19,7 @@ image:
 imagePullSecrets: []
 
 # -- A name in place of the chart name for `app:` labels.
-nameOverride: ""
+nameOverride: "test99"
 
 # -- A name to substitute for the full names of resources.
 fullnameOverride: ""
