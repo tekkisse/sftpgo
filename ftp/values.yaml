@@ -3,7 +3,7 @@
 # Declare variables to be passed into your templates.
 
 # -- Number of replicas (pods) to launch.
-replicaCount: 2
+replicaCount: 1
 
 image:
   # -- Name of the image repository to pull the container image from.
