@@ -94,7 +94,8 @@ service:
   annotations: {}
 
   # -- Kubernetes [service type](https://kubernetes.io/docs/concepts/services-networking/service/#publishing-services-service-types).
-  type: ClusterIP
+#  type: ClusterIP
+  type: LoadBalancer
 
   # -- (string) Only applies when the service type is LoadBalancer. Load balancer will get created with the IP specified in this field.
   loadBalancerIP:
