@@ -94,8 +94,8 @@ service:
   annotations: {}
 
   # -- Kubernetes [service type](https://kubernetes.io/docs/concepts/services-networking/service/#publishing-services-service-types).
-#  type: ClusterIP
-  type: LoadBalancer
+  type: ClusterIP
+#  type: LoadBalancer
 
   # -- (string) Only applies when the service type is LoadBalancer. Load balancer will get created with the IP specified in this field.
   loadBalancerIP:
@@ -140,16 +140,16 @@ service:
 # -- Additional services exposing servers (SFTP, FTP, WebDAV, HTTP) individually.
 # The schema matches the one under the `service` key. Additional services need at least one port.
 services: {}
-  # public:
-  #   annotations: {}
-  #   type: LoadBalancer
-  #   loadBalancerIP:
-  #   loadBalancerSourceRanges: []
-  #   ports:
-  #     sftp: # Only SFTP will be exposed
-  #       port: 22
-  #       nodePort:
-  #   externalTrafficPolicy:
+   public:
+     annotations: {}
+     type: LoadBalancer
+     loadBalancerIP:
+     loadBalancerSourceRanges: []
+     ports:
+       sftp: # Only SFTP will be exposed
+         port: 22
+         nodePort:
+     externalTrafficPolicy:
 
 # -- Container resource [requests and limits](https://kubernetes.io/docs/concepts/configuration/manage-resources-containers/).
 # See the [API reference](https://kubernetes.io/docs/reference/kubernetes-api/workload-resources/pod-v1/#resources) for details.
